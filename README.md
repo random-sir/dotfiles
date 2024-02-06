@@ -17,5 +17,7 @@ For a manual/minimal setup you must install stow and run the following commmand 
 #### Functionality
 This script is responsible for the following things:
 
-- Installing some useful/necessary packages
 - Setting up important dotfiles through stow
+- Installing some useful/necessary packages
+- Creating a Build directory
+- Building and installing Yay (AUR helper)
