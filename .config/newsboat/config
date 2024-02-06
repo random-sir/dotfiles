@@ -1,0 +1,2 @@
+include /usr/share/doc/newsboat/contrib/colorschemes/nord
+auto-reload yes
