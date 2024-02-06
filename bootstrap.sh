@@ -13,8 +13,8 @@ stow .
 sudo pacman -S --needed base-devel git neovim fish newsboat wezterm
 
 #Make Build directory
-mkdir ~/Builds
+[ ! -d ~/Builds ] && mkdir ~/Builds
 
 #Build Yay
 cd ~/Builds/
-git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
+[ ! -f /usr/bin/yay ] && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
