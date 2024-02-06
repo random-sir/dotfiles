@@ -17,6 +17,4 @@ mkdir ~/Builds
 
 #Build Yay
 cd ~/Builds/
-git clone https://aur.archlinux.org/yay.git
-cd yay
-makepkg -si
+git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
