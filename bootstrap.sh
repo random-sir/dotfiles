@@ -10,7 +10,7 @@ cd ~/dotfiles
 stow .
 
 #install usual packages
-sudo pacman -S --needed base-devel git neovim fish newsboat wezterm
+sudo pacman -S --needed base-devel git neovim fish newsboat wezterm ttf-fira-code
 
 #Make Build directory
 [ ! -d ~/Builds ] && mkdir ~/Builds
