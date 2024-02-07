@@ -1,6 +1,9 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
     
+    #Variables
+    set VISUAL nvim
+
     #Pacman abbreviations
     abbr pi "sudo pacman -S"
     abbr pu "sudo pacman -Syu"
