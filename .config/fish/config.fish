@@ -16,4 +16,7 @@ if status is-interactive
     abbr gcm "git checkout master"
     abbr gca "git commit -a"
     abbr gl "git log"
+
+    #Setting up zoxide
+    zoxide init fish | source
 end
