@@ -20,7 +20,15 @@ cd ~/Builds/
 [ ! -f /usr/bin/yay ] && git clone https://aur.archlinux.org/yay.git && cd yay && makepkg -si
 
 #Install yay packages
-yay -S nbfc-linux
+yay -S --needed nbfc-linux
+
+read -p 'Do you wish to configure nbfc (notebook fan control) using Acer nitro 5 preset? (Y/n): ' nbfcOption 
+
+if [[ ! $nbfcOption =~ ^[Nn]$ ]]; then
+	sudo nbfc config --set 'Acer Nitro AN515-51'
+	sudo nbfc start
+	sudo systemctl enable nbfc_service
+fi
 
 #Optional gnome install and configuration
 read -p 'Do you wish to install and configure gnome? (Y/n): ' gnomeOption
