@@ -3,6 +3,7 @@ if status is-interactive
     
     #Variables
     set VISUAL nvim
+    set BROWSER firefox
 
     #Pacman abbreviations
     abbr pi "sudo pacman -S"
