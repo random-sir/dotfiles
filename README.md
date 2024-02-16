@@ -22,3 +22,6 @@ This script is responsible for the following things:
 - Installing some useful/necessary packages
 - Creating a Build directory
 - Building and installing Yay (AUR helper)
+- Installing yay packages
+- Configuring nbfc (optional)
+- Configuring DE with gnome and pop-shell (optional)
