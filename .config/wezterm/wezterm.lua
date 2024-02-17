@@ -20,6 +20,9 @@ config.inactive_pane_hsb = {
   brightness = 0.7,
 }
 
+-- Make the default program fish
+config.default_prog = { '/usr/bin/fish' }
+
 config.launch_menu = {
   {
     -- Optional label to show in the launcher. If omitted, a label
@@ -27,7 +30,7 @@ config.launch_menu = {
     label = 'Bash',
     -- The argument array to spawn.  If omitted the default program
     -- will be used as described in the documentation above
-    --args = {'bash'},
+    args = {'bash'},
     -- You can specify an alternative current working directory;
     -- if you don't specify one then a default based on the OSC 7
     -- escape sequence will be used (see the Shell Integration
@@ -41,7 +44,6 @@ config.launch_menu = {
   },
   {
    label = 'Fish',
-   args = {'fish'},
   }
 }
 
@@ -53,15 +55,17 @@ config.keys = {
 },
 }
 
-wezterm.on("gui-startup", function(cmd)
-  local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
-  window
-    :gui_window()
-    :perform_action(
-      wezterm.action.ShowLauncherArgs({ flags = 'LAUNCH_MENU_ITEMS' }),
-      pane
-    )
-end)
+-- UNUSED, function show launch menu when wezterm opens
+--wezterm.on("gui-startup", function(cmd)
+--  local tab, pane, window = wezterm.mux.spawn_window(cmd or {})
+--  window
+--    :gui_window()
+--    :perform_action(
+--      wezterm.action.ShowLauncherArgs({ flags = 'LAUNCH_MENU_ITEMS' }),
+--      pane
+--    )
+--end)
+
 config.force_reverse_video_cursor = true
 config.use_dead_keys = false
 config.font = wezterm.font 'Fira Code'
