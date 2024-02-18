@@ -10,7 +10,7 @@ cd ~/dotfiles
 stow .
 
 #install usual packages
-sudo pacman -S --needed --noconfirm base-devel git neovim fish newsboat wezterm ttf-fira-code zoxide fzf
+sudo pacman -S --needed --noconfirm base-devel git neovim fish newsboat wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji ttf-fira-code zoxide fzf zellij
 
 #Make Build directory
 [ ! -d ~/Builds ] && mkdir ~/Builds
@@ -35,9 +35,12 @@ read -p 'Do you wish to install and configure gnome? (Y/n): ' gnomeOption
 
 if [[ ! $gnomeOption =~ ^[Nn]$ ]]; then
 	#Installing gnome and xorg
-	sudo pacman -S --needed --noconfirm xorg gnome gnome-extra
-	#Installing nvidia drivers
-	sudo pacman -S --needed --noconfirm lib32-nvidia-utils nvidia nvidia-prime nvidia-utils
+	sudo pacman -S --needed --noconfirm xorg gnome gnome-extra libsecret libgnome-keyring seahorse
+	#Installing nvidia things
+	sudo pacman -S --needed --noconfirm lib32-nvidia-utils nvidia nvidia-prime nvidia-utils switcheroo-control
+	#Enabling switcheroo
+	systemctl enable switcheroo-control.service
+	systemctl enable gdm.service
 	#Installing pop-shell things
 	sudo pacman -S --needed --noconfirm typescript make
 	cd ~/Builds
