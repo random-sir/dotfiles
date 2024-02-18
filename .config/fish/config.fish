@@ -1,9 +1,10 @@
 if status is-interactive
     # Commands to run in interactive sessions can go here
-    
+	
     #Variables
     set VISUAL nvim
     set BROWSER firefox
+    set SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
 
     #Pacman abbreviations
     abbr pi "sudo pacman -S"
@@ -17,6 +18,8 @@ if status is-interactive
     abbr gcm "git checkout master"
     abbr gca "git commit -a"
     abbr gl "git log"
+    abbr gst "git status"
+
 
     #Setting up zoxide
     zoxide init fish | source
