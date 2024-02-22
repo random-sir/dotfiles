@@ -2,14 +2,21 @@
 #This script is meant to be ran to setup a new arch system
 #DEPENDENCIES: pacman, sudo
 
-#install stow
+#Make sure that sed is installed (required by base so should always be)
+sudo pacman -S --needed --noconfirm sed
+
+#Use sed to activate pacman settings I like
+sudo sed -i 's/#Color/Color/g' pacman.conf #Color
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' pacman.conf #Parallel Downloads (There might be a better way to do this
+
+#Install stow
 sudo pacman -S --needed --noconfirm stow
 
-#stow the dotfiles directory
+#Stow the dotfiles directory
 cd ~/dotfiles
 stow .
 
-#install usual packages
+#Install usual packages
 sudo pacman -S --needed --noconfirm base-devel git pacman-contrib neovim fish newsboat firefox wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji ttf-fira-code zoxide fzf zellij
 
 #Make Build directory
