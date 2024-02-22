@@ -1,6 +1,6 @@
 procs:
-  checkupdates:
+  Check updates:
     cmd: ["checkupdates"]
-  update:
+  Update:
     shell: "sudo pacman -Syu"
     autostart: false
