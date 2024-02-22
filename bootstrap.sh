@@ -3,7 +3,7 @@
 #DEPENDENCIES: pacman, sudo
 
 #install stow
-sudo pacman -S --needed stow
+sudo pacman -S --needed --noconfirm stow
 
 #stow the dotfiles directory
 cd ~/dotfiles
@@ -39,8 +39,8 @@ if [[ ! $gnomeOption =~ ^[Nn]$ ]]; then
 	#Installing nvidia things
 	sudo pacman -S --needed --noconfirm lib32-nvidia-utils nvidia nvidia-prime nvidia-utils switcheroo-control
 	#Enabling switcheroo
-	systemctl enable switcheroo-control.service
-	systemctl enable gdm.service
+	sudo systemctl enable switcheroo-control.service
+	sudo systemctl enable gdm.service
 	#Installing pop-shell things
 	sudo pacman -S --needed --noconfirm typescript make
 	cd ~/Builds
