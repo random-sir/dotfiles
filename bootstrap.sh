@@ -7,7 +7,7 @@ sudo pacman -S --needed --noconfirm sed
 
 #Use sed to activate pacman settings I like
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf #Color
-sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf #Parallel Downloads (There might be a better way to do this
+sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf #Parallel Downloads (There might be a better way to do this)
 
 #Install stow
 sudo pacman -S --needed --noconfirm stow
