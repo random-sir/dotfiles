@@ -5,3 +5,4 @@
 - [X] Update README
 - [X] Add nbfc configuration
 - [ ] Finish driver configuration 
+- [ ] Actually do error handling
