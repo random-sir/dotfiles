@@ -9,6 +9,21 @@ sudo pacman -S --needed --noconfirm sed
 sudo sed -i 's/#Color/Color/g' /etc/pacman.conf #Color
 sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf #Parallel Downloads (There might be a better way to do this)
 
+#install reflector
+sudo pacman -S --needed --noconfirm reflector
+
+#move config
+sudo mv ~/dotfiles/reflector.conf /etc/xdg/reflector
+
+#Enable reflector timer
+sudo systemctl enable reflector.timer
+
+#Start reflector service once (Fix mirrors)
+sudo systemctl start reflector.service
+
+#Force update to make sure everything is okay
+sudo pacman -Syyuu
+
 #Install stow
 sudo pacman -S --needed --noconfirm stow
 
