@@ -4,8 +4,7 @@ if status is-interactive
     #Variables
     set VISUAL nvim
     set BROWSER firefox
-    set SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
-
+    set -gx SSH_AUTH_SOCK $XDG_RUNTIME_DIR/gcr/ssh
     #Pacman abbreviations
     abbr pi "sudo pacman -S"
     abbr pu "sudo pacman -Syu"
