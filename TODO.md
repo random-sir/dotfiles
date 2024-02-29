@@ -6,3 +6,4 @@
 - [X] Add nbfc configuration
 - [ ] Finish driver configuration 
 - [ ] Actually do error handling
+- [ ] Tidy up installed packages in bootstrap 

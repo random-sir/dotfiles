@@ -32,7 +32,7 @@ cd ~/dotfiles
 stow .
 
 #Install usual packages
-sudo pacman -S --needed --noconfirm base-devel git pacman-contrib neovim fish fisher newsboat firefox wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji ttf-fira-code zoxide fzf zellij
+sudo pacman -S --needed --noconfirm base-devel git pacman-contrib neovim fish fisher newsboat firefox wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji ttf-fira-code zoxide fzf zellij git-delta
 
 #Make Build directory
 [ ! -d ~/Builds ] && mkdir ~/Builds
