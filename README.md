@@ -6,8 +6,9 @@ This repo contains important configs for things I use
 
 For an easy setup you may simply run the [boostrap.sh](#bootstrap) script.
 
-For a manual/minimal setup you must install stow and run the following commmand on the directory where you cloned the dotfiles repo
+For a manual/minimal setup you must install stow and run the following commmands on the directory where you cloned the dotfiles repo
     
+    mkdir ~/.config #if .config doesn't exist stow symlinks .config TO the stowed directory
     stow .
 Then install whatever packages you actually want.
 ### Bootstrap <a name="bootstrap"></a>
