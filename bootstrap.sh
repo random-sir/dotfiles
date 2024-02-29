@@ -28,6 +28,7 @@ sudo pacman -Syyuu
 sudo pacman -S --needed --noconfirm stow
 
 #Stow the dotfiles directory
+mkdir ~/.config
 cd ~/dotfiles
 stow .
 
