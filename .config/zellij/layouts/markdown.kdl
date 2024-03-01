@@ -1,0 +1,17 @@
+layout {
+tab split_direction="vertical"{
+    pane {
+        command "nvim"
+	args "README.md"
+	borderless true
+	close_on_exit true
+    }
+    pane {
+    	command "bash"
+        args "-c" "echo README.md | entr -c glow README.md"
+	borderless true
+
+	hey
+    }
+}
+}
