@@ -88,6 +88,19 @@ local plugins = {
   {
      "folke/trouble.nvim",
      dependencies = { "nvim-tree/nvim-web-devicons" },
+  },
+  {
+    "kdheepak/lazygit.nvim",
+    cmd = {
+        "LazyGit",
+    		"LazyGitConfig",
+    		"LazyGitCurrentFile",
+    		"LazyGitFilter",
+    		"LazyGitFilterCurrentFile",
+    },
+    dependencies = {
+            "nvim-lua/plenary.nvim",
+    },
   }
 }
 
