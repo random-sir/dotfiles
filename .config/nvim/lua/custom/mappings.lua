@@ -11,7 +11,10 @@ M.general = {
         require("conform").format()
       end,
       "formatting",
-    }
+    },
+
+    ["<leader>gg"] = { ":LazyGit <CR>", "LazyGit"},
+    ["<leader>l"] = { ":Lazy <CR>", "Lazy"},
 
   },
   v = {
