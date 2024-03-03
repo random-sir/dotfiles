@@ -77,6 +77,18 @@ local plugins = {
       require('oil').setup({})
     end
   },
+  {
+     "folke/todo-comments.nvim",
+     dependencies = { "nvim-lua/plenary.nvim", "folke/trouble.nvim" },
+     lazy = false,
+     config = function()
+      require("todo-comments").setup()
+     end
+  },
+  {
+     "folke/trouble.nvim",
+     dependencies = { "nvim-tree/nvim-web-devicons" },
+  }
 }
 
 return plugins
