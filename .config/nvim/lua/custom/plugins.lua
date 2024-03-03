@@ -61,13 +61,21 @@ local plugins = {
   --   lazy = false,
   -- }
   {
-    "imsnif/kdl.vim",
-    ft="kdl"
+    'imsnif/kdl.vim',
+    ft = "kdl"
   },
 
   {
     'tigion/nvim-asciidoc-preview',
-    ft= {"asciidoc"},
+    ft = {"asciidoc"},
+  },
+  {
+    'stevearc/oil.nvim',
+    lazy = false,
+    dependencies = {'nvim-tree/nvim-web-devicons'},
+    config = function()
+      require('oil').setup({})
+    end
   },
 }
 
