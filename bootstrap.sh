@@ -12,8 +12,8 @@ sudo sed -i 's/#ParallelDownloads = 5/ParallelDownloads = 5/g' /etc/pacman.conf 
 #install reflector
 sudo pacman -S --needed --noconfirm reflector
 
-#move config
-sudo mv ~/dotfiles/reflector.conf /etc/xdg/reflector
+#copy config
+sudo cp ~/dotfiles/reflector.conf /etc/xdg/reflector
 
 #Enable reflector timer
 sudo systemctl enable reflector.timer
@@ -72,4 +72,15 @@ if [[ ! $gnomeOption =~ ^[Nn]$ ]]; then
 	make local-install
 	gsettings --schemadir ~/.local/share/gnome-shell/extensions/pop-shell@system76.com/schemas set org.gnome.shell.extensions.pop-shell activate-launcher "['<Super>space']"
 	yay -S pop-launcher pop-theme
+fi
+
+read -p 'Do you wish to install NvChad? (Y/n): ' neovimOption
+
+if [[ ! $neovimOption =~ ^[Nn]$ ]]; then
+  rm -r ~/.config/nvim
+  git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
+  NVCHAD_EXAMPLE_CONFIG=n nvim --headless "+q"
+  cd ~/dotfiles
+  rm -rf ~/.config/nvim/lua/custom
+  stow .
 fi
