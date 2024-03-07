@@ -100,6 +100,14 @@ local plugins = {
 		},
 		dependencies = { "nvim-lua/plenary.nvim" },
 	},
+  {
+    "lambdalisue/suda.vim",
+    lazy = false,
+    cmd= {
+      "SudaRead",
+      "SudaWrite"
+    }
+  }
 }
 
 return plugins
