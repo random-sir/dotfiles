@@ -19,6 +19,7 @@ sudo cp ~/dotfiles/reflector.conf /etc/xdg/reflector
 sudo systemctl enable reflector.timer
 
 #Start reflector service once (Fix mirrors)
+echo 'Fetching and configuring the best mirrors'
 sudo systemctl start reflector.service
 
 #Force update to make sure everything is okay
@@ -32,8 +33,15 @@ mkdir ~/.config
 cd ~/dotfiles
 stow .
 
+#Organizing what I want to install
+terminal='wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji ttf-fira-code'
+fish='fish fisher'
+browser='firefox'
+development='base-devel git neovim git-delta xclip'
+misc='pacman-contrib newsboat zoxide fzf zellij'
+
 #Install usual packages
-sudo pacman -S --needed --noconfirm base-devel git pacman-contrib neovim fish fisher newsboat firefox wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji ttf-fira-code zoxide fzf zellij git-delta
+sudo pacman -S --needed --noconfirm $terminal $fish $browser $development $misc 
 
 #Make Build directory
 [ ! -d ~/Builds ] && mkdir ~/Builds
