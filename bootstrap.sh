@@ -38,7 +38,7 @@ terminal='wezterm python-nautilus ttf-nerd-fonts-symbols-mono noto-fonts-emoji t
 fish='fish fisher'
 browser='firefox'
 development='base-devel git neovim git-delta xclip'
-misc='pacman-contrib newsboat zoxide fzf zellij'
+misc='pacman-contrib newsboat zoxide fzf zellij bat bat-extras ripgrep'
 
 #Install usual packages
 sudo pacman -S --needed --noconfirm $terminal $fish $browser $development $misc 
