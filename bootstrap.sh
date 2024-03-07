@@ -77,9 +77,13 @@ fi
 read -p 'Do you wish to install NvChad? (Y/n): ' neovimOption
 
 if [[ ! $neovimOption =~ ^[Nn]$ ]]; then
-  rm -r ~/.config/nvim
+  #Installing NvChad
+  rm -rf ~/.config/nvim
+  rm -rf ~/.local/share/nvim
   git clone https://github.com/NvChad/NvChad ~/.config/nvim --depth 1
   NVCHAD_EXAMPLE_CONFIG=n nvim --headless "+q"
+
+  #Adding my personal config
   cd ~/dotfiles
   rm -rf ~/.config/nvim/lua/custom
   stow .
