@@ -70,8 +70,8 @@ if [[ ! $gnomeOption =~ ^[Nn]$ ]]; then
 	#Installing nvidia things
 	sudo pacman -S --needed --noconfirm lib32-nvidia-utils nvidia nvidia-prime nvidia-utils switcheroo-control
 	#Enabling switcheroo
-	sudo systemctl enable switcheroo-control.service
 	sudo systemctl enable gdm.service
+	sudo systemctl enable switcheroo-control.service
 	#Installing pop-shell things
 	sudo pacman -S --needed --noconfirm typescript make
 	cd ~/Builds
