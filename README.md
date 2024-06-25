@@ -11,7 +11,9 @@ For a manual/minimal setup you must install stow and run the following commmands
     $ mkdir ../.config #if .config doesn't exist stow symlinks .config TO the stowed directory
     $ stow .
 Then install whatever packages you actually want.
+
 ### Bootstrap <a name="bootstrap"></a>
+
 #### Dependencies:
 - Sudo
 - Pacman

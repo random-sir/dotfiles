@@ -13,6 +13,7 @@ M.treesitter = {
     "cpp",
     "markdown",
     "markdown_inline",
+    "org"
   },
   indent = {
     enable = true,
@@ -20,6 +21,10 @@ M.treesitter = {
     --   "python"
     -- },
   },
+  highlight = {
+    enable = true,
+  },
+  additional_vim_regex_highlighting = { "org" },
 }
 
 M.mason = {
